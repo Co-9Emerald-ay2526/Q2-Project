@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <title>Meet the Creator - ICT Club</title>
+    <style>
+        :root {
+            --bg-gradient-1: #0f172a;
+            --bg-gradient-2: #1e1b4b;
+            --accent-cyan: #06b6d4;
+            --accent-indigo: #6366f1;
+            --card-bg: rgba(30, 41, 59, 0.7);
+        }
+
+        * { box-sizing: border-box; }
+
+        html, body { 
+            height: 100%; 
+            margin: 0; 
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: #f8fafc;
+            background: linear-gradient(135deg, var(--bg-gradient-1) 0%, var(--bg-gradient-2) 100%);
+            background-attachment: fixed;
+        }
+
+        /* Main Content Styling */
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 3rem 1rem;
+        }
+
+        .profile {
+            width: 100%;
+            max-width: 480px;
+            padding: 3rem 2rem 2.5rem;
+            text-align: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .profile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(99, 102, 241, 0.25);
+        }
+
+        .photo {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 1.75rem;
+            overflow: hidden;
+            border-radius: 50%;
+            padding: 4px;
+            background: linear-gradient(135deg, var(--accent-cyan), var(--accent-indigo));
+            box-shadow: 0 10px 25px rgba(6, 182, 212, 0.3);
+        }
+
+        .photo-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            background: #0f172a;
+        }
+
+        .photo .initials {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 2.2rem;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            background: linear-gradient(135deg, var(--accent-indigo), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .photo img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .profile h1 {
+            margin: 0 0 1.75rem;
+            font-weight: 800;
+            font-size: 1.75rem;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+        }
+
+        .details {
+            margin: 0;
+            display: grid;
+            gap: 1rem;
+            text-align: left;
+        }
+
+        .details div {
+            padding: 1rem 1.25rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 14px;
+            transition: background 0.2s ease;
+        }
+
+        .details div:hover {
+            background: rgba(255, 255, 255, 0.07);
+        }
+
+        .details dt {
+            font-weight: 600;
+            font-size: 0.75rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #94a3b8;
+        }
+
+        .details dd {
+            margin: 0.25rem 0 0;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        /* Footer Styling */
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            font-size: 0.9rem;
+            color: #94a3b8;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        footer span { 
+            color: #f8fafc; 
+            font-weight: 600; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">2Q Drill</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Homepage</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="elementchecker.html">Element Checker</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="club-members.html">School Club Members</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="creator.html">Meet the Creator</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="profile" aria-labelledby="creator-name">
+            <div class="photo">
+                <div class="photo-inner">
+                    <!-- Change 'creator.jpg' to whatever you named your downloaded image file -->
+                    <img src="creator.jpg" alt="Photo of Joseph Anthony Co">
+                </div>
+            </div>
+
+            <h1 id="name">Joseph Anthony Co</h1>
+
+            <dl class="details">
+                <div>
+                    <dt>Grade and Section</dt>
+                    <dd>10-Emerald</dd>
+                </div>
+                <div>
+                    <dt>Campus</dt>
+                    <dd>Greenhills</dd>
+                </div>
+            </dl>
+        </section>
+    </main>
+</body>
+</html>
